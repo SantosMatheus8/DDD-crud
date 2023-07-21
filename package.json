@@ -1,0 +1,31 @@
+{
+  "name": "ddd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config=jest.config.ts",
+    "tsc": "tsc",
+    "dev": "ts-node-dev src/app/server.ts",
+    "start": "ts-node src/app/server.ts",
+    "starts": "ts-node --respawn --transpile-only --exit-child src/app/server.ts",
+    "typeorms": "ts-node ./node_modules/.bin/typeorm",
+    "typeorm:migrate": "typeorm migration:create -- -n",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migration:up": "ts-node ./node_modules/.bin/typeorm migration:run -d src/infra/database/connection.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.3",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "typeorm": "^0.3.17"
+  }
+}
